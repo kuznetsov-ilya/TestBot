@@ -11,9 +11,9 @@ bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
 
 
-@dp.message_handler(commands=commands)
+@dp.message_handler(commands=['start'])
 async def send_welcome(message: types.Message):
-    await message.reply('''Hi! I'm Bot.!\nTo see my commands text "/help"''')
+    await message.reply('''Hi! I'm Bot.!\nTo see my commands text "/help".''')
 
 
 if __name__ == '__main__':
